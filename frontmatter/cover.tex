@@ -1,0 +1,41 @@
+% Cover definition for the collaborative CERN--TU Delft thesis.
+\makeatletter
+
+% Shared thesis metadata used by the cover and internal title page.
+\title{SQD developement for the ALICE 3 Colaboration}
+\subtitle{Developement of PCB Like SQDs}
+\author{Felix Voßbrink}
+
+\newlength{\covermargin}
+\setlength{\covermargin}{30mm}
+\let\oldoddsidemargin\oddsidemargin
+
+\renewcommand{\CoverFront}{%
+  \begin{tikzpicture}[overlay, inner sep=0pt]
+    \fill[white] (0,0) rectangle (\oldpaperwidth,\oldpaperheight);
+    \node[anchor=north west] at (\covermargin, \oldpaperheight-\covermargin)
+      {\includegraphics[width=48mm]{figures/cover/CERN_logo_outline.png}};
+    \node[anchor=north west] at
+      (\covermargin, \dimexpr\oldpaperheight-85mm\relax)
+      {\begin{minipage}{\dimexpr(\oldpaperwidth-2\covermargin)\relax}
+        \raggedright
+        {\headingfont\fontsize{28pt}{34pt}\selectfont\@title\par}
+        \vspace{8mm}
+        {\headingfont\fontsize{18pt}{24pt}\selectfont\@subtitle}
+      \end{minipage}};
+    \node[anchor=south west] at (\covermargin, \covermargin)
+      {\begin{minipage}{\dimexpr(\oldpaperwidth-2\covermargin)\relax}
+        \raggedright
+        {\headingfont\fontsize{26pt}{32pt}\selectfont\@author}
+      \end{minipage}};
+    \node[anchor=south east, scale=3] at
+      (\dimexpr\oldpaperwidth-\covermargin\relax, \covermargin)
+      {\tudlogo};
+  \end{tikzpicture}%
+}
+
+\renewcommand{\CoverBack}{}
+\renewcommand{\CoverSpine}{}
+
+\MakeCoverFront%
+\makeatother

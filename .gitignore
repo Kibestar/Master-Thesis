@@ -1,0 +1,22 @@
+# LaTeX build products
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.pdf
+
+# Local/editor files
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
