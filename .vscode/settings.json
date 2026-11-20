@@ -1,0 +1,42 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "cSpell.userWords": [
+        "overfitting"
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-cd",
+                "-pdf",
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "-outdir=output",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": ["%DOCFILEBASE%"]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        { "name": "latexmk (Default)", "tools": ["latexmk"] }
+    ],
+    "latex-workshop.latex.outDir": "%DIR%/output",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.clean.command": "latexmk",
+    "latex-workshop.latex.clean.args": [
+        "-cd", "-c", "-outdir=output", "%DOCFILE%"
+    ],
+    "latex-workshop.latex.magic.args": [
+        "-pdf", "-interaction=nonstopmode", "-synctex=1", "-outdir=output"
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "chat.viewSessions.orientation": "stacked",
+    "git.confirmSync": false
+}
